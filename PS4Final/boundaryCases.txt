@@ -1,0 +1,67 @@
+1. Boundary case: invalid input, e.g. "7830" or "=+91" or "F~~48a"
+Results
+
+Kevin Bacon is now the center of the universe, connected to 7494/9235 actors with average separation 3.2814626985186175
+
+Kevin Bacon game >
+
+4425
+
+Kevin Bacon game >
+
+Kevin Bacon game >
+iaja
+
+Kevin Bacon game >
+nantuckett
+
+Kevin Bacon game >
+
+F~~48a
+
+Kevin Bacon game >
+
+Kevin Bacon game >
+-------------------------------------------------
+
+2. Boundary case: first letter of input is a valid command but subsequent letters are not, e.g "c deajfk"
+Results
+Kevin Bacon game >
+c deajfk
+Error message: java.lang.NumberFormatException: For input string: "deajfk"
+
+Kevin Bacon game >
+c 218043813
+Error message: java.lang.IndexOutOfBoundsException: Index 7494 out of bounds for length 7494
+-------------------------------------------------
+
+3. Boundary case: chosen actor does not exist in the universe, e.g Timothy Pierson
+Results
+Kevin Bacon game >
+u Timothy Pierson
+Name does not exist in dataset
+-------------------------------------------------
+
+4. Boundary case: chosen actor exists in universe, and input also exists in universe, but input is not connected to chosen actor, e.g Franco Citti & Angelina Jolie
+Results
+Kevin Bacon game >
+u Franco Citti
+Franco Citti is now the center of the universe, connected to 6/9235 actors with average separation 1.0
+
+Kevin Bacon game >
+p Angelina Jolie
+Angelina Jolie is not connected to Franco Citti
+
+Kevin Bacon game >
+-------------------------------------------------
+
+5. Boundary case: inputting one variable when the given command requires 2, e.g "d 5" instead of, say, "d 5 9"
+Results
+Kevin Bacon game >
+d 5
+Error message: java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+
+Kevin Bacon game >
+-------------------------------------------------
+
+6. Anything else I've forgotten to include should be covered by this number and the code should work fine.
